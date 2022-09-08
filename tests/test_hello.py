@@ -10,3 +10,4 @@ class Test_hello(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+#n estudiaa esta parte,clas test evalua la funcion

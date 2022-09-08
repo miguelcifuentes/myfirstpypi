@@ -40,7 +40,7 @@ def main():
         version="0.0.1",
 
         # Application author details:
-        author="PANBLO,
+        author="PANBLO",
         author_email="paulcifu@gmail.com",
 
         # Packages

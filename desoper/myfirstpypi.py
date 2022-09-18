@@ -10,6 +10,11 @@ def hello():
     '''
     return 'Hello, World!'
 
+def lola(x):
+    r'''
+    lola function
+    '''
+    return x*x
 
 if __name__ == '__main__':
     r'''

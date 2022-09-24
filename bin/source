@@ -8,7 +8,7 @@ from typing_extensions import Type
 # programa inicial de examen  
 # Import the library
 #from desoper import abc123# debo importar funciones del archivo pc 
-import argparse000
+import argparse
 parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
 
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':Backup
     #print(abc123.hello())
     #a = abc123.funcion_recibe_valueN()# importamos las funciones 
     #b = abc123.funcion_recibe_valueM
-    #cBackup = abc123.funcion_recibe_value_zmax
+    #Backup = abc123.funcion_recibe_value_zmax
     #d = abc123.fuBackupncion_recibe_valueimax   
     #e = abc123.funcion_recibe_value_n
     if args.number:

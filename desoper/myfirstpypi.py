@@ -45,51 +45,49 @@ def get_solution(l,k,zmax=zmax):
     else:
         return {}    
 
-def get_solution_from_list(lk,zmax=zmax):
-    n=len(lk)
-  
-    l=lk[:n//2]
-    k=lk[n//2:]
-        return get_solution(l,k,zmax)
-  
+ def get_solution_from_list(lk,zmax=zmax):
+     n=len(lk)
+     l=lk[:n//2]
+     k=lk[n//2:]
+     return get_solution(l,k,zmax)
+
   
   def principal(n,m,imax,zmax,N):
 
-    df=pd.DataFrame()
-    long =(2*m+1)**(n-2)
+     df=pd.DataFrame()
+     long =(2*m+1)**(n-2)
     
-    size_old =0
-    i=0 
-    d_size=1
-    while d_size>0:
-        ll=da.random.randint(-m,m+1,(N,n-2))
-        ll=ll.to_dask_dataframe().drop_duplicates().to_dask_array()
-        ll=ll.compute()
-        s=time.time()
-        #print('grid → ',time.time()-s,ll.shape)
-        pool = Pool(cpu_count())
+     size_old =0
+     i=0 
+     d_size=1
+     while d_size>0:
+         ll=da.random.randint(-m,m+1,(N,n-2))
+         ll=ll.to_dask_dataframe().drop_duplicates().to_dask_array()
+         ll=ll.compute()
+         s=time.time()
+         #print('grid → ',time.time()-s,ll.shape)
+         pool = Pool(cpu_count())
 
-        sls = pool.map(get_solution_from_list,ll)
-        #else:
-        #    sls=[r for r in pool.imap_unordered(get_solution_from_list,ll,chunksize=len(ll)//cpu_count())]
-        pool.close()
-        del ll
+         sls = pool.map(get_solution_from_list,ll)
+         
+         pool.close()
+         del ll
 
-        sls=[d for d in sls if d]
-        #print('sols → ',time.time()-s,len(sls))
-        #Unique solutions
-        df=df.append(  sls,ignore_index=True    )
+         sls=[d for d in sls if d]
+         #print('sols → ',time.time()-s,len(sls))
+         #Unique solutions
+         df=df.append(  sls,ignore_index=True    )
 
-        df.sort_values('gcd')
-        df['zs']=df['z'].astype(str)
-        df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
-        d_size=df.shape[0]-size_old
-        if d_size>0:
-            size_old=df.shape[0]
-        if i>=imax:
-          break
+         df.sort_values('gcd')
+         df['zs']=df['z'].astype(str)
+         df=df.drop_duplicates('zs').drop('zs',axis='columns').reset_index(drop=True)
+         d_size=df.shape[0]-size_old
+         if d_size>0:
+             size_old=df.shape[0]
+         if i>=imax:
+           break
           
-        return print('unique solutions → ',df.shape), df  
+         return print('unique solutions → ',df.shape), df  
   
 
 if __name__ == '__main__': 

@@ -50,7 +50,7 @@ def get_solution_from_list(lk,zmax=zmax):
   
     l=lk[:n//2]
     k=lk[n//2:]
-    return get_solution(l,k,zmax)
+        return get_solution(l,k,zmax)
   
   
   def principal(n,m,imax,zmax,N):

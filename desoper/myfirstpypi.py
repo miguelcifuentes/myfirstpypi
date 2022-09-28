@@ -44,15 +44,15 @@ def get_solution(l,k,zmax=zmax):
         return {'l':l,'k':k,'z':list(q),'gcd':gcd}
     else:
         return {}    
-
- def get_solution_from_list(lk,zmax=zmax):
-     n=len(lk)
-     l=lk[:n//2]
-     k=lk[n//2:]
-     return get_solution(l,k,zmax)
+    
+def get_solution_from_list(lk,zmax=zmax):
+    n=len(lk)
+    l=lk[:n//2]
+    k=lk[n//2:]
+    return get_solution(l,k,zmax)
 
   
-  def principal(n,m,imax,zmax,N):
+ def principal(n,m,imax,zmax,N):
 
      df=pd.DataFrame()
      long =(2*m+1)**(n-2)

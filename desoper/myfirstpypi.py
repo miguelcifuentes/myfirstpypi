@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-r'''
-myfirstpypi 
-'''
 import dask.array as da
 import pandas as pd
 from multiprocessing import Pool

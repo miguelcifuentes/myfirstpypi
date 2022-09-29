@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 import dask.array as da
 import pandas as pd
 from multiprocessing import Pool
@@ -86,7 +86,7 @@ def principal(n,m,imax,zmax,N):
         if i>=imax:
             break
           
-        return print(df)  
+        return df
   
 
 if __name__ == '__main__': 

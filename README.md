@@ -7,7 +7,7 @@ The related software just print `Hello World!`. To avoid conflicts with the pack
 
 ## Install
 ```bash
-$ pip install -i https://test.pypi.org/simple/ desoper
+pip install -i https://test.pypi.org/simple/ myfirstpypi
 ```
 ## USAGE
 ```python

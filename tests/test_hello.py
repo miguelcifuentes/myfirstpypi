@@ -1,17 +1,18 @@
 import unittest
 from desoper import myfirstpypi
+import pandas as pd
 
 
 
 class Test_hello(unittest.TestCase):
     def test__working(self):
-        lsl=myfirstpypi.principal(5,9,0,30,400000)
-        self.assertEqual(11,lsl.shape[0], True)
+        ls1=pd.DataFrame(myfirstpypi.principal(5,9,0,30,400000))
+        self.assertEqual(12,ls1.shape[0], True)
  
 class Test_hello(unittest.TestCase):
     def test__working(self):
-        lsl=myfirstpypi.principal(5,9,0,30,400000)
-        self.assertEqual(11,lsl.shape[0], True)
+        ls2=myfirstpypi.principal(6,9,0,30,400000)
+        self.assertEqual(11,ls2.shape[0], True)
        
 
 

@@ -25,15 +25,20 @@ def iniciar():
     parser.add_argument('-imax', '--imaximo',type=int,default=0, required=False, help='valor de iteraciones hechas para recoorre el espacio de posibñes respuestas')
     # entrada argumento numero 5
     parser.add_argument('-n', '--number',type=int,default=5,required=True,action='store',help='entero para que es la dimension de z ')
-
+    # argumento de guardado de archivo
+    
+    parser.add_argument('-w', '--output_name',type=str,default="solution",required=False,action='store',help='entero para que es la dimension de z ')
+    
     args = parser.parse_args()
     return args
 
 def main(args): 
   
   if args.number:
-      a=args.number*3
+      
       c=principal(args.number,args.magnitud,args.imaximo,args.zmaximo,args.numlist)
+      c.to_json(args.output_name+'.json',orient='records')
+        
   return  print(c) 
  
 if __name__ == '__main__': 

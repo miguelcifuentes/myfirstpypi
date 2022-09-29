@@ -9,6 +9,7 @@ from typing_extensions import Type
 # Import the library
 #from desoper import abc123# debo importar funciones del archivo pc 
 import argparse
+from desoper.myfirstpypi import principal 
 import sys 
 def iniciar():
 

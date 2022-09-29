@@ -12,7 +12,7 @@ class Test_hello(unittest.TestCase):
 class Test_hello(unittest.TestCase):
     def test__working(self):
         ls2=myfirstpypi.principal(6,9,0,30,400000)
-        self.assertEqual(11,ls2.shape[0], True)
+        self.assertEqual(142,ls2.shape[0], True)
        
 
 

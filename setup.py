@@ -37,7 +37,7 @@ def main():
         name="myfirstpypi",
 
         # Version number (initial):
-        version="0.0.5",
+        version="0.0.7",
 
         # Application author details:
         author="PANBLO",

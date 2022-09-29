@@ -7,7 +7,7 @@ from desoper.myfirstpypi import principal
 class Test_hello(unittest.TestCase):
     def test__working1(self):
         ls1=principal(5,9,0,30,400000)
-        self.assertEqual(11,ls1.shape[0], True)
+        self.assertEqual(12,ls1.shape[0], True)
 
     def test__working2(self):
         ls2=principal(6,9,0,30,400000)

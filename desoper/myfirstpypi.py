@@ -86,7 +86,7 @@ def principal(n,m,imax,zmax,N):
         if i>=imax:
             break
           
-        return df
+ return df
   
 
 if __name__ == '__main__': 

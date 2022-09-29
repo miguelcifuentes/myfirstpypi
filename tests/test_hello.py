@@ -1,12 +1,18 @@
 import unittest
-from desoper import  myfirstpypi
+from desoper import myfirstpypi
 
 
 
 class Test_hello(unittest.TestCase):
     def test__working(self):
-        self.assertEqual(myfirstpypi.hello(),
-                         'Hello, World!', True)
+        lsl=myfirstpypi.principal(5,9,0,30,400000)
+        self.assertEqual(11,lsl.shape[0], True)
+ 
+class Test_hello(unittest.TestCase):
+    def test__working(self):
+        lsl=myfirstpypi.principal(5,9,0,30,400000)
+        self.assertEqual(11,lsl.shape[0], True)
+       
 
 
 if __name__ == '__main__':

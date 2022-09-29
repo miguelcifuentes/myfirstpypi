@@ -51,7 +51,7 @@ def main():
 
         # Details
         url="https://github.com/miguelcifuentes/myfirstpypi/",
-        scripts=['bin/source'],
+        scripts=['bin/myfirstpypi'],
 
         license="BSD",
 

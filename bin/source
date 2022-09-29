@@ -16,9 +16,9 @@ def iniciar():
     parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
 
     # entrada argumento numero 1 
-    parser.add_argument('-N', '--numlist',type= int,default=500000,required=True,help='espacio de listas de posibles repuestas')
+    parser.add_argument('-N', '--numlist',type= int,default=500000,required=False,help='espacio de listas de posibles repuestas')
     # entrada argumento numero 2 
-    parser.add_argument('-m', '--magnitud',type=int,default=1,required=True,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
+    parser.add_argument('-m', '--magnitud',type=int,default=1,required=False,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
     # entrada argumento numero 3 
     parser.add_argument('-zmax', '--zmaximo',type=int,default=30,required=False,help='valor del zmaximo')
     # entrada argumento numero 4 
@@ -33,7 +33,8 @@ def main(args):
   
   if args.number:
       a=args.number*3
-  return  print(a) 
+      c=principal(args.number,args.magnitud,args.imaximo,args.zmaximo,args.numlist)
+  return  print(c) 
  
 if __name__ == '__main__': 
     args=iniciar()

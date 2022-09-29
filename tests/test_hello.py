@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from desoper import principal 
+from desoper.myfirstpypi import principal 
 
 
 

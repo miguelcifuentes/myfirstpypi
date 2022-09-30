@@ -50,7 +50,7 @@ def main():
         include_package_data=True,
 
         # Details
-        url="https://github.com/restrepo/DevOps",
+        url="https://github.com/miguelcifuentes/myfirstpypi",
         scripts=['bin/myfirstpypi'],
 
         license="BSD",

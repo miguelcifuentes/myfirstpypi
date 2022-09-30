@@ -3,7 +3,8 @@
 ![Python package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Python%20package/badge.svg)
 ![Upload Python Package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Upload%20Python%20Package/badge.svg)
 
-Calcula n  numeros que sumados al cubo dan como resultado cero,ademas que sumados da cero.impementa multiprocesing
+Calcula n  numeros que sumados al cubo dan como resultado cero,ademas que sumados da cero.
+implementa el metodo multiprocesing en busqueda de eficiencia.
 
 ## Install
 ```bash

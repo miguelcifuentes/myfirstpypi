@@ -3,7 +3,7 @@
 ![Python package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Python%20package/badge.svg)
 ![Upload Python Package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Upload%20Python%20Package/badge.svg)
 
-The related software just print `Hello World!`. To avoid conflicts with the package name, we use the Spanish translation _DesOper_
+Calcula n  numeros que sumados al cubo dan como resultado cero,ademas que sumados da cero.
 
 ## Install
 ```bash
@@ -11,7 +11,5 @@ pip install -i https://test.pypi.org/simple/ myfirstpypi
 ```
 ## USAGE
 ```python
->>> from desoper import hello
->>> hello.hello()
-Hello World!
-```
+>>> from desoper import myfirstpypi
+>>> myfirstpypi.principal

@@ -12,19 +12,19 @@ import argparse
 from desoper.myfirstpypi import principal 
 import sys 
 def iniciar():
-
+''' funcion inicial  que contiene los argumentos que el usuario ingresa en la terminal   '''
     parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
 
     # entrada argumento numero 1 
-    parser.add_argument('-N', '--numlist',type= int,default=500000,required=False,help='espacio de listas de posibles repuestas')
+    parser.add_argument('-N', '--numlist',type= int,default=500000,required=False,help='espacio de listas de posibles repuestas,valor por default 500000 ')
     # entrada argumento numero 2 
-    parser.add_argument('-m', '--magnitud',type=int,default=1,required=False,help='agregue enteros mayores que 1 hasta que obtenga soluciones completas ')
+    parser.add_argument('-m', '--magnitud',type=int,default=1,required=False,help='agregua enteros mayores que 1 hasta que obtenga soluciones completas,por defecto su valor es 1 ')
     # entrada argumento numero 3 
-    parser.add_argument('-zmax', '--zmaximo',type=int,default=30,required=False,help='valor del zmaximo')
+    parser.add_argument('-zmax', '--zmaximo',type=int,default=30,required=False,help='valor del zmaximo por defecto  su valor es 30')
     # entrada argumento numero 4 
-    parser.add_argument('-imax', '--imaximo',type=int,default=0, required=False, help='valor de iteraciones hechas para recoorre el espacio de posibñes respuestas')
+    parser.add_argument('-imax', '--imaximo',type=int,default=0, required=False, help='valor de iteraciones hechas para recorre el espacio de posibles respuestas por defecto su valor es cero')
     # entrada argumento numero 5
-    parser.add_argument('-n', '--number',type=int,default=5,required=True,action='store',help='entero para que es la dimension de z ')
+    parser.add_argument('-n', '--number',type=int,default=5,required=True,action='store',help='entero para que es la dimension de z por defecto es 5 ')
     # argumento de guardado de archivo
     
     parser.add_argument('-w', '--output_name',type=str,default="solution",required=False,action='store',help='entero para que es la dimension de z ')

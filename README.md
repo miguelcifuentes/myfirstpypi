@@ -1,4 +1,4 @@
-# Template for GitHub actions for DevOps
+# Template for GitHub actions for myfirstpypi
 
 ![Python package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Python%20package/badge.svg)
 ![Upload Python Package](https://github.com/miguelcifuentes/myfirstpypi/workflows/Upload%20Python%20Package/badge.svg)

@@ -30,7 +30,7 @@ def _get_chiral(q,q_max=np.inf):
     GCD=np.gcd.reduce(q)
     q=(q/GCD).astype(int)
     if ( #not 0 in z and 
-          0 not in [ sum(p) for p in itertools.permutations(q, 2) ] and #avoid vector-like and multiple 0's
+          0 not in [ sum(p) for p in itertools.permutations(q, 2) ] and
           np.abs(q).max()<=q_max
            ):
         return q,GCD
@@ -39,7 +39,7 @@ def _get_chiral(q,q_max=np.inf):
     
 def get_solution(l,k,zmax=zmax):
     q,gcd=_get_chiral( z(l,k) )
-    #if q is not None and np.abs(q).max()<=zmax:#
+    #if q is not None and np.abs(q).max()<=zmax:
     if q is not None and np.abs(q).max()<=zmax:
         return {'l':l,'k':k,'z':list(q),'gcd':gcd}
     else:
@@ -53,6 +53,7 @@ def get_solution_from_list(lk,zmax=zmax):
 
   
 def principal(n,m,imax,zmax,N):
+ '''funcion principal que recibe los valores de n,m,imax,zmax,n ingresados por el usuario'''
 
     df=pd.DataFrame()
     long =(2*m+1)**(n-2)
@@ -64,7 +65,7 @@ def principal(n,m,imax,zmax,N):
         ll=ll.to_dask_dataframe().drop_duplicates().to_dask_array()
         ll=ll.compute()
         s=time.time()
-        #print('grid → ',time.time()-s,ll.shape)
+      
         pool = Pool(cpu_count())
 
         sls = pool.map(get_solution_from_list,ll)
@@ -73,8 +74,6 @@ def principal(n,m,imax,zmax,N):
         del ll
 
         sls=[d for d in sls if d]
-        #print('sols → ',time.time()-s,len(sls))
-        #Unique solutions
         df=df.append(  sls,ignore_index=True    )
 
         df.sort_values('gcd')

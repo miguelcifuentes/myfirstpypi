@@ -18,21 +18,17 @@ zmax=32
 z=anomaly.free
 
 def _get_chiral(q,q_max=np.inf):
-    #Normalize to positive minimum
-    if 0 in q:
+        if 0 in q:
         #q=q[q!=0]
         return None,None
     if q.size==0:
         return None,None
     if q[0]<0:
         q=-q
-    #Divide by GCD
+   
     GCD=np.gcd.reduce(q)
     q=(q/GCD).astype(int)
-    if ( #not 0 in z and 
-          0 not in [ sum(p) for p in itertools.permutations(q, 2) ] and
-          np.abs(q).max()<=q_max
-           ):
+    if ( 0 not in [ sum(p) for p in itertools.permutations(q, 2) ] and np.abs(q).max()<=q_max):
         return q,GCD
     else:
         return None,None

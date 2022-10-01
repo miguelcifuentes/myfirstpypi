@@ -18,7 +18,7 @@ zmax=32
 z=anomaly.free
 
 def _get_chiral(q,q_max=np.inf):
-        if 0 in q:
+    if 0 in q:
         #q=q[q!=0]
         return None,None
     if q.size==0:
@@ -31,7 +31,7 @@ def _get_chiral(q,q_max=np.inf):
     if ( 0 not in [ sum(p) for p in itertools.permutations(q, 2) ] and np.abs(q).max()<=q_max):
         return q,GCD
     else:
-        return None,None
+         return None,None
     
 def get_solution(l,k,zmax=zmax):
     q,gcd=_get_chiral( z(l,k) )

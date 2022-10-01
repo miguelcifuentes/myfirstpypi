@@ -7,9 +7,11 @@ Calcula n  numeros que sumados al cubo dan como resultado cero y ademas que al s
 implementa el metodo multiprocesing en busqueda de eficiencia.
 
 ## Install
+Debemos instalar el paquete anomalies como requisito 
 ```bash
 pip install anomalies
 ```
+una vez finaliza la instalacion del paquete anomalies,ejecutamos los siguientes comandos 
 ```bash
 pip install -i https://test.pypi.org/simple/ myfirstpypi
 ```

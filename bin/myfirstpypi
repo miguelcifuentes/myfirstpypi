@@ -12,7 +12,7 @@ import argparse
 from desoper.myfirstpypi import principal 
 import sys 
 def iniciar():
-''' funcion inicial  que contiene los argumentos que el usuario ingresa en la terminal   '''
+''' funcion inicial  que contiene los argumentos que el usuario ingresa en la terminal '''
     parser = argparse.ArgumentParser(description='argumentos de pedida del programa')
 
     # entrada argumento numero 1 
@@ -32,7 +32,8 @@ def iniciar():
     args = parser.parse_args()
     return args
 
-def main(args): 
+def main(args):
+    '''  importa la funcion principal de desde desoper y calcula las posibles soluciones de acuerdo con los valores estableacidos por comando por el usuario'''
   
   if args.number:
       

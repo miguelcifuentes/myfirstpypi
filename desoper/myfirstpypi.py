@@ -49,8 +49,7 @@ def get_solution_from_list(lk,zmax=zmax):
 
   
 def principal(n,m,imax,zmax,N):
- '''funcion principal que recibe los valores de n,m,imax,zmax,n ingresados por el usuario'''
-
+ 
     df=pd.DataFrame()
     long =(2*m+1)**(n-2)
     size_old =0
